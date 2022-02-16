@@ -12,7 +12,7 @@ import Card from '@mui/material/Card';
 
 
 
-export default function Movie({name, rating, summary, poster,trailer, id, deleteButton, editButton}){
+export default function Receipe({name, rating, summary, poster, id, deleteButton, editButton}){
     const [show, setShow] = useState(false);
 const styles = rating > 8 ? {color : 'teal', fontWeight: 'bold'} : {color : 'crimson', fontWeight: 'bold'};
 const history = useHistory();
@@ -20,19 +20,19 @@ const history = useHistory();
 const summarystyles = { display :show ? 'block' : 'none'} 
     return (
       
-      <Card className="movie-container">
+      <Card className="receipe-container">
         
           
         <img 
           src={poster} 
-          alt={name} 
-          className="movie-poster"/>
-        <div className="movie-specs">
-              <h3 className="movie-name">{name}
+          alt={name} receipe
+          className="receipe-poster"/>
+        <div className="receipe-specs">
+              <h3 className="receipe-name">{name}
 
               <IconButton 
                 onClick={() =>{
-                  history.push("/movies/" + id);
+                  history.push("/receipes/" + id);
                 }} 
                 
                   aria-label="delete" 
@@ -50,14 +50,14 @@ const summarystyles = { display :show ? 'block' : 'none'}
                 
               </h3>
 
-              <p className="movie-rating" style={styles}>⭐{rating} </p>
+              <p className="receipe-rating" style={styles}>⭐{rating} </p>
               </div>
 
        
         
-        {/* <p   style={summarystyles} className="movie-summary">{summary}</p>   */}
+      
 
-        {show ? <p   style={summarystyles} className="movie-summary">{summary}</p> : ""}
+        {show ? <p   style={summarystyles} className="receipe-summary">{summary}</p> : ""}
         <Counter /> {editButton} {deleteButton}
         
         

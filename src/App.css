@@ -4,6 +4,12 @@
   
   
 }
+.div-container{
+  display: flex;
+}
+.back{
+  position: sticky !important;
+}
 .welcome{
 font-size: 32px;
 height: 100vh;
@@ -12,7 +18,7 @@ justify-content: center;
 align-items: center;
 }
 
-.movieList{
+.receipeList{
   background-color: rgba(0, 0, 255, 0.699);
 }
 
@@ -25,7 +31,7 @@ align-items: center;
   height: 100px;
   width: 100px;
 }
-.movie-container{
+.receipe-container{
   background-color: white;
   min-width: 320px;
   width: 350px;
@@ -38,13 +44,13 @@ align-items: center;
 -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.81);
 -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.81);
 }
-.add-movie-form{
+.add-receipe-form{
   display: flex;
   flex-direction: column;
   
   margin: 30px;
 }
-.add-movie-input{
+.add-receipe-input{
   margin: 20px;
 }
 .button{
@@ -53,37 +59,37 @@ align-items: center;
 }
 
 
-.movie-poster{
+.receipe-poster{
   height: 300px;
   width: 350px;
   object-fit: cover;
 }
 
-.movie-specs{
+.receipe-specs{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.movie-rating{
+.receipe-rating{
   font-size: 18px;
   margin-right: 5px;
 }
 
-.movie-name{
+.receipe-name{
   font-size: 24px;
   margin: 5px;
   max-width: 80%;
 }
 
-.movie-summary{
+.receipe-summary{
   margin-top: 0px;
   margin: 10px;
 }
 
 
 
-.movieList{
+.receipeList{
   display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -103,16 +109,16 @@ align-items: center;
   background-color: brown;
 }
 
-.movie-container:hover{
+.receipe-container:hover{
   transition: all 0.5s;
   transform: scale(1.05);
 }
 
-.movie-show-button{
+.receipe-show-button{
 font-size: 15px;
 }
 
-.add-movie{
+.add-receipe{
   display: flex;
   flex-direction: column;
   width: 75%;

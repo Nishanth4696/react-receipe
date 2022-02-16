@@ -1,16 +1,16 @@
-import  Movie  from './Movie.js';
+import  Receipe  from './Receipe.js';
 import DeleteIcon from '@mui/icons-material/Delete';
 import IconButton from '@mui/material/IconButton';
 import EditIcon from '@mui/icons-material/Edit'
 import { useHistory } from 'react-router-dom';
 
 
-export default function MovieList({Movies, setMovies}){
+export default function ReceipeList({Receipes,setReceipes}){
   const history = useHistory();
     return(
-      <section className="movieList">
-         {Movies.map(({name,rating,summary, poster, trailer}, index) => 
-          <Movie 
+      <section className="receipeList">
+         {Receipes.map(({name,rating,summary, poster, trailer}, index) => 
+          <Receipe 
             name={name} 
             rating={rating} 
             summary={summary} 
@@ -21,11 +21,11 @@ export default function MovieList({Movies, setMovies}){
               <IconButton 
                 onClick={() =>{
                   const deleteIdx = index;
-                  const remainingMovies = Movies.filter((mv, idx) => idx !== deleteIdx) 
-                  console.log("remaining", remainingMovies)
-                  setMovies(remainingMovies)
+                  const remainingReceipes = Receipes.filter((mv, idx) => idx !== deleteIdx) 
+                  console.log("remaining", remainingReceipes)
+                  setReceipes(remainingReceipes)
                 }} 
-                  className="movie-show-button"
+                  className="receipe-show-button"
                   aria-label="delete" 
                   color="error">
                     <DeleteIcon />
@@ -33,11 +33,11 @@ export default function MovieList({Movies, setMovies}){
             }
             editButton={
               <IconButton 
-                onClick={() =>{ history.push("/movies/edit/" + index)
+                onClick={() =>{ history.push("/receipes/edit/" + index)
                  
                 }} 
                 style={{ marginLeft:"auto" }}
-                className="movie-show-button"
+                className="receipe-show-button"
                   aria-label="delete" 
                   color="primary">
                     <EditIcon />
