@@ -4,6 +4,15 @@
   
   
 }
+
+.ingredients{
+  display: flex;
+    margin: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: stretch;
+}
 .div-container{
   display: flex;
 }
